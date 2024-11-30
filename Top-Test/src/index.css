@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Container for the modal card */
+.card-container {
+    perspective: 1000px; /* Add perspective to give a 3D effect */
+  }
+  
+  /* Front and back of the card */
+  .card {
+    width: 450px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out;
+  }
+  
+  /* Card Front */
+  .card .front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the back side */
+    background-color: #1e3a3a; /* Add your color */
+  }
+  
+  /* Card Back */
+  .card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the front side */
+    background-color: #105050; /* Add your color */
+    transform: rotateY(180deg); /* Rotate the back side 180 degrees */
+  }
+  
+  /* Hover effect to flip the card */
+  .card:hover {
+    transform: rotateY(180deg);
+  }
+  
+  /* Add hover effect to the button */
+  .donate-btn:hover:before {
+    background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNzUycHQiIGhlaWdodD0iNzUycHQiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDc1MiA3NTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8cGF0aCBkPSJtMzY5Ljg0IDU1MC4yOGMwLjQ3MjY2IDAuNDcyNjYgMC45NDUzMSAwLjQ3MjY2IDAuOTQ1MzEgMC45NDUzMSA2NS4zNTUtNTEuNjIxIDE5My43LTE0OC4yMyAxOTMuNy0yNDkuMTEgMC01NS44ODMtNDUuNDY1LTEwMS4zNS0xMDEuMzUtMTAxLjM1LTM5Ljc4MSAwLTc0LjM1MiAyMy4yMDctOTAuOTI2IDU2LjgyOC0wLjQ3MjY2IDAuOTQ1MzEtMS40MjE5IDMuMzE2NC0xLjQyMTkgMy4zMTY0cy0wLjk0NTMxLTEuODk0NS0wLjk0NTMxLTIuMzY3MmMtMTYuMTAyLTM0LjA5LTUwLjY3Mi01Ny43Ny05MC45MjYtNTcuNzctNTUuODgzIDAtMTAxLjM1IDQ1LjQ2MS0xMDEuMzUgMTAxLjM0IDAgMTAxLjgyIDEyNy44NyAxOTcuMDEgMTkyLjI3IDI0OC4xNnoiIGZpbGw9IiNmZmYiLz4KPC9zdmc+Cg==");
+    transition: all .9s ease-in-out;
+    transform: rotate(-1turn);
+  }
+  .set {
+    display: block;
+    width: 90px;
+    height: 60px;
+    background-image: linear-gradient(
+      to right,
+      gold 0%,
+      gold 32%,
+      black 32%,
+      black 33%,
+      gold 33%,
+      gold 65%,
+      black 65%,
+      black 66%,
+      gold 66%,
+      gold 100%
+    );
+    border-radius: 8px;
+    margin-bottom: 30px;
+    margin-left: 15px;
+  }
+  
